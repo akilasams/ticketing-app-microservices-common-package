@@ -9,7 +9,8 @@
   ],
   "scripts": {
     "clean": "del-cli ./build/*",
-    "build": "npm run clean && tsc"
+    "build": "npm run clean && tsc",
+    "pub": "git add . && git commit -m \"Updates\" && npm version patch && npm run build && npm publish"
   },
   "keywords": [],
   "author": "Akila Samarawickrama",
@@ -17,5 +18,14 @@
   "devDependencies": {
     "del-cli": "^5.1.0",
     "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@types/cookie-session": "^2.0.48",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.6",
+    "cookie-session": "^2.1.0",
+    "express": "^4.19.2",
+    "express-validator": "^7.0.1",
+    "jsonwebtoken": "^9.0.2"
   }
 }
